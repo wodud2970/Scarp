@@ -14,7 +14,7 @@ query = input("검색어 입력")
 s_date = input("시작날짜 입력(2019.01.01):") #2019.01.01
 e_date = input("끝날짜 입력(2019.04.28):") #2019.04.28
 
-
+#뉴스 url 가졍괴
 def get_news(n_url):
     news_detail = []
     breq = requests.get(n_url)
@@ -31,7 +31,7 @@ def get_news(n_url):
     news_detail.append(pcompany)
     return news_detail
 
-
+#안에 내용 크롤링
 def crawler(maxpage,query,s_date,e_date):
     s_from = s_date.replace('.','')
     e_to = e_date.replace('.','')
